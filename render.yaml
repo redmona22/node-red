@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: nodered
+    env: docker
+    plan: starter
+    buildCommand: "npm install --unsafe-perm"
+    startCommand: "npm start"
+    envVars:
+      - key: NODE_RED_USERNAME
+        value: "admin"
+      - key: NODE_RED_PASSWORD
+        value: "RADHEkrishna25@@"  # 👈 CHANGE THIS TO A STRONG PASSWORD!
+      - key: FLOWS
+        value: "flows.json"
+      - key: NODE_ENV
+        value: "production"
